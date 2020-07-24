@@ -1,0 +1,23 @@
+<div class="main-container">
+    <div class="title-container">
+        <img src="/assets/img/heading-shape.png" fxHide.lt-sm="true" class="brush-heading"/>
+        <p fxHide.lt-sm="true">Nuestros Articulos</p>
+        <p fxLayout.lt-sm="column" fxFlexAlign.lt-sm="center center" fxHide="true" fxShow.lt-sm="true">Articulos</p>
+    </div>
+    <div fxLayout="row" fxFlexAlign="center center">
+        <div fxFlex="25" fxHide.lt-sm="true">
+            <div class="menu">
+                <p *ngFor="let button of menuButtons" 
+                    [ngClass]="{'selected': menuSelected === button.name}"
+                    (click)="changeMenu(button.name)"
+                >
+                    {{ button.name }}
+                    <img src='/assets/ico/arrow.svg'/>
+                </p>
+            </div>
+        </div>
+        <div fxFlex="90">
+            <app-articles [menuSelected]="menuSelected"></app-articles>
+        </div>
+    </div>
+</div>
