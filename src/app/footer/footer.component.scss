@@ -1,0 +1,92 @@
+.title-container {
+    position: relative;
+    height: 200px;
+    p {
+        position: absolute;
+        font-family: 'Caveat';
+        font-size: 80px;
+        line-height: 0px;
+        align-items: center;
+        text-align: center;
+        color: #3F454A;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    };
+    .brush-heading {
+        top: 25px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 20%;
+        margin: auto;
+        position: absolute;
+    };
+}
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    font-family: 'Open Sans Bold';
+    .input-field {
+        label {
+            padding: 10px 0;
+            color: #24272A;
+            display: block;
+            text-align: initial;
+        };
+        input {
+            width: 350px;
+            height: 50px;
+            background: #FFFFFF;
+            border: 1px solid #CFCFCF;
+            font-family: 'Open Sans';
+            box-sizing: border-box;
+            display: block;
+            padding-left: 22px;
+        };
+        input:focus {
+            box-sizing: border-box;
+            outline: none;
+            border-color: #D8AD3D;
+        };
+        .input-error, .input-error:focus {
+            box-sizing: border-box;
+            outline: none;
+            border-color:#B72C2C;
+        }
+    }
+    .button-field{
+        padding-top: 25px;
+        padding-bottom: -25px;
+        button {
+            background: #D8AD3D;
+            border: unset;
+            border-radius: 50px;
+            font-family: 'Open Sans Bold';
+            color: white;
+            height: 55px;
+            width: 170px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover {
+            background: #009CD9;
+        }
+        button:disabled, button[disabled]{
+            background: #CFCFCF;
+        }
+    };
+}
+.hint {
+    font-family: 'Open Sans';
+    line-height: 1.2em;
+    transform: translateY(10px);
+    font-size: 75%;
+    float: left;
+    color: #B72C2C;
+    padding-bottom: 1px;
+}

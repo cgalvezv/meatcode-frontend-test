@@ -1,0 +1,50 @@
+<footer>
+    <div class="title-container" fxLayout.lt-sm="column">
+        <img src="/assets/img/heading-shape.png" fxHide.lt-sm="true" fxHide.lt-md="true" class="brush-heading"/>
+        <p>Contáctanos</p>
+    </div>
+    <form [formGroup]="subsForm" (ngSubmit)="onSubmit()">
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center"  fxLayoutGap="15px">
+            <div class="input-field">
+                <label for="fn">Nombre</label>
+                <input name="fn" type="text" formControlName='firstname'>
+            </div>
+            <div class="input-field">
+                <label for="ln">Apellido</label>
+                <input name="ln" type="text" formControlName='lastname'>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.lt-sm="column"  fxLayoutAlign="center center"  fxLayoutGap="20px">
+            <div class="input-field">
+                <label for="ml">Email</label>
+                <input [ngClass]="{
+                    'input-error': subsForm.get('email').invalid
+                }" name="ml" type="text" formControlName='email'>
+                <div *ngIf="subsForm.get('email').invalid && (subsForm.get('email').dirty || subsForm.get('email').touched)">
+                    <span *ngIf="subsForm.get('email').errors.email" class="hint">
+                        Formato incorrecto. (Formato permitdo: meatcode@gmail.com)
+                    </span>
+                </div>
+            </div>
+            <div class="input-field">
+                <label for="ph">Téléfono</label>
+                <input [ngClass]="{
+                    'input-error': subsForm.get('phone').invalid
+                }"  name="ph" type="text" formControlName='phone'>
+                <div *ngIf="subsForm.get('phone').invalid && (subsForm.get('phone').dirty || subsForm.get('phone').touched)">
+                    <span *ngIf="subsForm.get('phone').errors.pattern" class="hint">
+                        Formato incorrecto. (Formato permitdo: +569XXXXXXXXX)
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+            <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="start center" fxFlex="5"></div>
+            <div fxLayout="row" fxLayout.lt-sm="column" fxFlex="50" fxLayoutAlign="end center">
+                <div class="button-field">
+                    <button type="submit" [disabled]="!subsForm.valid">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</footer>
