@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [],
   imports: [
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatRippleModule
   ],
   exports: [
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatRippleModule
   ]
 })
 export class MaterialModule { }
