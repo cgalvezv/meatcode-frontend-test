@@ -15,8 +15,11 @@ import {
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
+/**
+ * Footer component, which contains the form for the subscription to the newslatter
+ * @author cgalvezv
+ */
 export class FooterComponent implements OnInit {
-
   // Form to generate suscription
   subsForm = new FormGroup({
     firstname: new FormControl(''),
@@ -71,9 +74,11 @@ export class FooterComponent implements OnInit {
     }
     return fullField !== Object.keys(form).length;
   }
+
   /**
-   * @param msg
-   * @param timeDuration
+   * Method showing a message using material snack bar
+   * @param msg is the message displayed
+   * @param timeDuration is the duration of the snack bar (in miliseconds)
    * @author cgalvezv
    */
   private openSnackBar(msg: string, timeDuration: number) {
