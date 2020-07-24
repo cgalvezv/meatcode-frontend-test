@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  src: url('/assets/fonts/caveat/Caveat-Bold.ttf') format("opentype");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  src: url('/assets/fonts/open-sans/OpenSans-Regular.ttf') format("opentype");
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  font-style: bold;
+  src: url('/assets/fonts/open-sans/OpenSans-Bold.ttf') format("opentype");
+}
