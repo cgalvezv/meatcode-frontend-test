@@ -1,0 +1,15 @@
+<div fxLayout="row wrap" fxLayoutGap="15px">
+    <ng-container *ngIf="isLoading; else stopLoadingBar">
+        <p class="loading-text">CARGANDO...</p>
+    </ng-container>
+    <ng-template #stopLoadingBar>
+        <app-article
+            *ngFor="let article of articles"
+            fxFlexAlign.lt-sm="strech"
+            fxFlex="0 1 calc(33.3% - 32px)" 
+            fxFlex.lt-md="0 1 calc(50% - 32px)"
+            fxFlex.lt-sm="100%"
+            [info]="article"
+        ></app-article>
+    </ng-template>
+</div>
