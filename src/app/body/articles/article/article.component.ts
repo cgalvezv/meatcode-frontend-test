@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Article } from 'src/app/shared/models/article.model';
+import { goToUrl } from 'src/app/shared/utils.functions';
 
 @Component({
   selector: 'app-article',
@@ -17,14 +18,10 @@ export class ArticleComponent {
    */
   @Input() info: Article;
 
-  constructor() { }
-
-  /**
-   * Method that redirects to a particular url, using another browser tab as a target
-   * @param url is the url to which you want to redirect
-   * @author cgalvezv
-   */
-  goToUrl(url: string) {
-    window.open(url, '_blank');
+  // access to a given url
+  href = (url: string) => {
+    goToUrl(url);
   }
+
+  constructor() { }
 }

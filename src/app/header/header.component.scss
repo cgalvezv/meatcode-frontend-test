@@ -1,0 +1,37 @@
+.sticky-rrss {
+    position: fixed;
+    right: 0;
+    overflow: hidden;
+    z-index: 10;
+    &.top{
+        top: 0;
+    }
+    &.bottom{
+        bottom: 0;
+        left: 0;
+    }
+    .button-rrss {
+        width: 62px;
+        height: 62px;
+        margin: 25px 15px;
+        background: rgba(255, 255, 255, 0.15);
+        box-sizing: border-box;
+        backdrop-filter: blur(14px);
+        border-radius: 50px;
+        outline:none;
+        cursor: pointer;
+        img {
+            display: block;
+            margin: 16px auto;
+        }
+        &.facebook {
+            border: 3px solid #009CD9;
+        }
+        &.instagram {
+            border: 3px solid #B72C2C;
+        }
+        &.youtube {
+            border: 3px solid #D8AD3D;
+        }
+    }
+}
