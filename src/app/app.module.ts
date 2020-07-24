@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './header/banner/banner.component';
 import { BodyComponent } from './body/body.component';
-import { AriclesComponent } from './body/aricles/aricles.component';
-import { ArticleComponent } from './body/aricles/article/article.component';
+import { ArticleComponent } from './body/articles/article/article.component';
+import { ArticlesComponent } from './body/articles/articles.component';
 import { FooterComponent } from './footer/footer.component';
 import { BackendService } from './shared/backend/backend.service';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/modules/material/material.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,15 +21,19 @@ import { BackendService } from './shared/backend/backend.service';
     HeaderComponent,
     BannerComponent,
     BodyComponent,
-    AriclesComponent,
     ArticleComponent,
-    FooterComponent
+    FooterComponent,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     BackendService
